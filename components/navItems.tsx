@@ -14,20 +14,17 @@ const NavItems = ({ handleClick } : { handleClick?: () => void }) => {
 
 
   return (
-    <section className='nav-items'>
-        <Link to="/" className='link-logo'>
-            <img src="/assets/icons/logo.svg" alt="logo"
-            className='size-[30px]' />
-            <h1 className='text-xl font-bold'>Travel Tour</h1>
-        </Link>
+     <section className="nav-items">
+            <Link to='/' className="link-logo">
+                <img src="/assets/icons/logo.svg" alt="logo" className="size-[30px]" />
+                <h1>TravelAgency</h1>
+            </Link>
 
-        <div className='container'>
-
- <nav>
+        <div className="container">
+                <nav>
                     {sidebarItems.map(({ id, href, icon, label }) => (
                         <NavLink to={href} key={id}>
                             {({ isActive }: { isActive: boolean }) => (
-
                                 <div className={cn('group nav-item', {
                                     'bg-primary-100 !text-white': isActive
                                 })} onClick={handleClick}>
@@ -44,7 +41,7 @@ const NavItems = ({ handleClick } : { handleClick?: () => void }) => {
                 </nav>
 
                 <footer className="nav-footer">
-                    <img src={user?.imageUrl || '/assets/images/david.webp'} alt={user?.name || 'Aditya'} referrerPolicy="no-referrer" />
+                    <img src={user?.imageUrl || '/assets/images/david.webp'} alt={user?.name || 'David'} referrerPolicy="no-referrer" />
 
                     <article>
                         <h2>{user?.name}</h2>
@@ -52,7 +49,9 @@ const NavItems = ({ handleClick } : { handleClick?: () => void }) => {
                     </article>
 
                     <button
-                        className="cursor-pointer"
+                        onClick={() => {
+                            console.log({ message: 'Logout' });
+                        }}
                     >
                         <img
                             src="/assets/icons/logout.svg"

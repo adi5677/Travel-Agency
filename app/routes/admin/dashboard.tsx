@@ -1,5 +1,4 @@
-// Update the import path to the correct location where Header is exported
-import { Header } from "../../../components/Header";
+import { Header } from "../../../components";
 
 const dashboard = () => {
 
@@ -14,8 +13,7 @@ const dashboard = () => {
                 title={`Welcome ${user?.name ?? 'Guest'} 👋`}
                 description="Track activity, trends and popular destinations in real time"
             />
-
-      Dashboard Page Contents
+            Dashboard Pages Contents
     </main>
   )
 }

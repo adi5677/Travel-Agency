@@ -20,6 +20,7 @@ const AdminLayout = () => {
             <aside className='children'>
                 <Outlet />
             </aside>
+            
     </div>
   )
 }
